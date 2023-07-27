@@ -1,0 +1,38 @@
+steps to deploy an nginx into ec2 instance
+sign into aws console and if you do not have an account you have to create an account
+1.create name and password
+2.login into the aws console
+3.click on Ec2 instance
+4.set your region as Ireland,scroll down to launch instance
+5.you will see launch an instance, scroll down to name and tags to name your instance 
+6.scroll down and click on Linux or Ubuntu you need to decide what you want to use,scroll to amazon machine imagecand check if its free tier eligable
+ and make sure that your instance type must show t2.micro 
+7.scroll to key pair login is change is change to proceed without a key pair<not recommended>
+8.scroll to firewall security and allow your SSH,HTTPS and HTTP, scroll to configure the storage and change it to gp2
+9.scroll down to launch instance it will show sucessfully initiated then click on connect to your instance it will take you to Linux terminal
+10. you need to update,upgrade and install httpd befor you can deploy pyhon3,nginx and any other pakage
+11.tep sudo yum update enter
+12.sudo yum upgrade enter
+13.sudo yum install httpd enter
+note that if you are using ubuntu you use different managers like yum for linux while apt is for ubuntu,
+apache is for ubuntu, while httpd is for Linux.
+14 to start nginx on the terminal you need to input 
+sudo systemctl start nginx enter
+if is disable you need to tep sudo systemctl enable nginx enter
+sudo systemctl start nginx press enter
+
+
+HOW TO CONNECT GITUH TO YOUR TERMINAL
+To link your github to your instance server
+login into your github account
+go to start a new respository
+click on pulic
+go to setting in your profile
+click on setting
+name your public file
+go to Developer setting click on personal access tokens
+click on Token classic ,it will generate token ,copy and pate some where
+then go to your repositry on your profile in github account
+click on code, it will generate a code that you will input into your terminal with a command like
+git clone https:/post your token/github@respositry code you copy 
+press enter 
